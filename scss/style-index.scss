@@ -18,7 +18,7 @@ $blue : #0A1172;
     
 }
 .page-content{
-    height: 100vh;
+    min-height: 105vh;
     background-image: url(brushed_alu.png);
     position:relative;
 
@@ -39,6 +39,7 @@ $blue : #0A1172;
           &--left {
             width: 100%;
             line-height: 1.2;
+            max-width: 50vw;
           }
         
           &--left h1{
@@ -46,12 +47,22 @@ $blue : #0A1172;
             color: $olive;
             text-align: center;
             margin-bottom: 70px;
+            white-space: nowrap;
+
+            @media (max-width:820px){
+              margin:5px;
+              font-size: 1.7rem;
+            }
           }
           &--left h2{
             font-size:2rem;
             color: $blue;
             margin-bottom: 25px;
             margin-left: 40px;
+            @media (max-width:820px){
+              margin:5px;
+              font-size: 1.6rem;
+            }
           }
           &--left p{
             font-size:1rem;
@@ -60,24 +71,39 @@ $blue : #0A1172;
             font-weight: 700;
             font-style: oblique;
             text-align: justify;
+
+            @media (max-width:820px){
+              align-self: flex-start;
+            }
           }
           &--right {
             text-align:right;
             display: flex;
+            align-items: center;
 
             @media (max-width:820px){
               flex-direction: column;
-              flex-shrink: 3;
+              max-height: 10vh;
+              align-self: flex-start;
+              width: 50vw;
+              
             }
 
           }
           
           &--img {
             margin: 0 0 20px 0;
-            flex: 1;
-            height: 295px;
-            width: 236px;
             padding: 20px;
+            max-width: 190px;
+
+            @media (max-width:820px){
+              padding:5px;
+              margin:0;
+              max-width: 40vw;
+              min-height:30vh;
+              
+            }
+
             
           }
         
